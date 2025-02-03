@@ -1,0 +1,35 @@
+body {
+  background-color: rgb(142, 204, 235);
+  background-image: url("./assets/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #f8efef;
+  width: 100%;
+  height: 100%;
+  /* min-height: 100vh; */
+  margin: 0;
+}
+
+.input {
+  /* border-color: aliceblue;
+  height: 30px;
+  width: 100px; */
+  display: flex;
+  vertical-align: middle;
+}
+
+.button {
+  border-color: none;
+  height: 20px;
+  width: 40px;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: blue;
+}
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px #cbd6ee;
+}
