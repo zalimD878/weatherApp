@@ -10,29 +10,20 @@ body {
 }
 
 .input-wrapper {
-  width: 500px;
-  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  margin: 100px auto 50px;
+  width: 70%;
 }
 
 .input {
-  display: flex;
-  vertical-align: middle;
-  gap: 10px;
-}
-
-.input input {
-  width: 100%;
-  padding: 12px 6px;
   border: none;
-  border-radius: 6px;
+  width: 100%;
 }
 
 .button {
-  border-color: none;
-  height: 20px;
-  width: 40px;
-  transition: all 0.3s linear;
   cursor: pointer;
+  border: none;
 }
 
 .button:hover {
@@ -41,4 +32,9 @@ body {
 .button:focus {
   outline: none;
   box-shadow: 0 0 0 1px #cbd6ee;
+}
+
+.weather-card {
+  width: 300px;
+  margin: 0 auto;
 }

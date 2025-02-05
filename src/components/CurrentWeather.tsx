@@ -21,6 +21,8 @@ interface CurrentWeatherProps {
     grnd_level: number;
     speed: number;
     deg: number;
+    name: string
+    temp: number
   };
 }
 
@@ -42,11 +44,16 @@ export function CurrentWeather({
 //   name,
 CurrentWeatherProps) {
   return (
-    <div>
+    <div className="weather-card">
+      <p>{weatherData.name}</p>
+      <p>{weatherData.temp}</p>
       <p>{weatherData.feels_like}</p>
       <p>{weatherData.description}</p>
       <p>{weatherData.pressure}</p>
       <p>{weatherData.sea_level}</p>
+      <p>{weatherData.grnd_level}</p>
+      <p>{weatherData.speed}</p>
+      <p>{weatherData.deg}</p>
     </div>
   );
 }
