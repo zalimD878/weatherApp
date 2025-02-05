@@ -15,7 +15,7 @@ export function Input({ grade, handleSearch }: InputProps) {
   }
 
   return (
-    <div>
+    <div className="input-wrapper">
       <h1>Поиск</h1>
 
       <div className="input">
@@ -25,7 +25,9 @@ export function Input({ grade, handleSearch }: InputProps) {
           onChange={(e) => setText(e.target.value)}
           placeholder="Введите ваш город"
         />
-        <button className="button" onClick={handleClick}></button>
+        <button className="button" onClick={handleClick}>
+          Поиск
+        </button>
       </div>
     </div>
   );

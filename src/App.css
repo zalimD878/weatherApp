@@ -9,9 +9,22 @@ body {
   margin: 0;
 }
 
+.input-wrapper {
+  width: 500px;
+  margin: 0 auto;
+}
+
 .input {
   display: flex;
   vertical-align: middle;
+  gap: 10px;
+}
+
+.input input {
+  width: 100%;
+  padding: 12px 6px;
+  border: none;
+  border-radius: 6px;
 }
 
 .button {
@@ -23,7 +36,7 @@ body {
 }
 
 .button:hover {
-  background-color: blue;
+  background-color: rgb(51, 106, 226);
 }
 .button:focus {
   outline: none;
