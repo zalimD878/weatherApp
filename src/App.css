@@ -9,29 +9,77 @@ body {
   margin: 0;
 }
 
-.input-wrapper {
+/* .header {
   width: 100%;
   display: flex;
-  margin: 100px auto 50px;
+  margin: 30px auto 50px;
+  width: 70%;
+} */
+.site-title {
+  font-family: "Arial", sans-serif;
+  font-size: 38px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #f3f0f1, #e02444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin: 20px 0;
+  letter-spacing: 2px;
+}
+
+.input-wrapper {
+  gap: 10px;
+  width: 100%;
+  display: flex;
+  margin: 60px auto 50px;
   width: 70%;
 }
 
 .input {
-  border: none;
   width: 100%;
+  background-color: #f5f2f2; /* Оранжевый */
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 5px;
+  outline: none;
+  /* transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: pulse 1.5s infinite; */
 }
 
 .button {
-  cursor: pointer;
+  background-color: #e02444; /* Оранжевый */
   border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: pulse 1.5s infinite;
 }
 
 .button:hover {
-  background-color: rgb(51, 106, 226);
+  background-color: #e64c8c; /* Темно-оранжевый */
+  transform: scale(1.1);
 }
-.button:focus {
-  outline: none;
-  box-shadow: 0 0 0 1px #cbd6ee;
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .weather-card {
