@@ -9,17 +9,11 @@ body {
   margin: 0;
 }
 
-/* .header {
-  width: 100%;
-  display: flex;
-  margin: 30px auto 50px;
-  width: 70%;
-} */
 .site-title {
   font-family: "Arial", sans-serif;
   font-size: 38px;
   font-weight: bold;
-  background: linear-gradient(45deg, #f3f0f1, #e02444);
+  background: linear-gradient(45deg, rgb(235, 145, 145), #ec062d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
@@ -82,7 +76,75 @@ body {
   }
 }
 
-.weather-card {
-  width: 300px;
+.weather-container {
+  font-family: "Arial", sans-serif;
+  background: #f0f0f0; /* Светлый фон */
+  color: #333; /* Темный текст */
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 300px;
   margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* Название города */
+.weather-city {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Контейнер для температуры и описания */
+.weather-main {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 0px;
+}
+
+/* Температура */
+.weather-temperature {
+  font-size: 48px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Описание погоды */
+.weather-description {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Ощущаемая температура */
+.weather-feels-like {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Дополнительные данные (давление, ветер) */
+.weather-details {
+  font-size: 14px;
+  color: #666;
+}
+
+.weather-details div {
+  margin-bottom: 5px;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 480px) {
+  .weather-container {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .weather-temperature {
+    font-size: 36px;
+  }
+
+  .weather-city {
+    font-size: 20px;
+  }
 }

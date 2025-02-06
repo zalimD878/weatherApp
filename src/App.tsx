@@ -17,8 +17,6 @@ const weatherData = {
   description,
   feels_like,
   pressure,
-  sea_level,
-  grnd_level,
   speed,
   deg,
   name,

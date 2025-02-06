@@ -17,12 +17,10 @@ interface CurrentWeatherProps {
     description: string;
     feels_like: number;
     pressure: number;
-    sea_level: number;
-    grnd_level: number;
     speed: number;
     deg: number;
-    name: string
-    temp: number
+    name: string;
+    temp: number;
   };
 }
 
@@ -44,16 +42,25 @@ export function CurrentWeather({
 //   name,
 CurrentWeatherProps) {
   return (
-    <div className="weather-card">
-      <p>{weatherData.name}</p>
-      <p>{weatherData.temp}</p>
-      <p>{weatherData.feels_like}</p>
-      <p>{weatherData.description}</p>
-      <p>{weatherData.pressure}</p>
-      <p>{weatherData.sea_level}</p>
-      <p>{weatherData.grnd_level}</p>
-      <p>{weatherData.speed}</p>
-      <p>{weatherData.deg}</p>
+    <div className="weather-container">
+      <p className="weather-city">{weatherData.name}</p>
+      <div className="weather-main">
+        <div>
+          <p className="weather-temperature">{weatherData.temp} °</p>
+        </div>
+        <div>
+          <p className="weather-description">{weatherData.description}</p>
+          <p className="weather-feels-like">
+            ощущается как {weatherData.feels_like}
+          </p>
+        </div>
+      </div>
+
+      <p className="weather-pressure">
+        давление {weatherData.pressure}мм рт. ст.
+      </p>
+      <p className="weather-wind-speed">{weatherData.speed}</p>
+      <p className="weather-wind-direction">{weatherData.deg}</p>
     </div>
   );
 }
