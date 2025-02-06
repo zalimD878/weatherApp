@@ -1,7 +1,9 @@
+import { getWeatherByCity } from "./api/weather";
 import "./App.css";
 import { CurrentWeather } from "./components/CurrentWeather";
 import { Input } from "./components/input";
 import { data } from "./Data";
+import { useState } from "react";
 
 const {
   weather: { main, description },
@@ -13,20 +15,29 @@ const {
   name,
 } = data;
 
-const weatherData = {
-  description,
-  feels_like,
-  pressure,
-  speed,
-  deg,
-  name,
-  temp,
-};
-
 export default function App() {
+  const [name, setName] = useState("");
+
+  const handleSearch = async (city: string) => {
+    const data = await getWeatherByCity(city);
+
+    console.log(data);
+    setName(data.name);
+  };
+
+  const weatherData = {
+    description,
+    feels_like,
+    pressure,
+    speed,
+    deg,
+    name,
+    temp,
+  };
+
   return (
     <div>
-      <Input handleSearch={() => {}} grade={7} />
+      <Input handleSearch={handleSearch} grade={7} />
       <CurrentWeather weatherData={weatherData} />
     </div>
   );
