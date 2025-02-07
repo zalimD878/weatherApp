@@ -1,17 +1,18 @@
 import { useState } from "react";
 
 interface InputProps {
-  grade: number;
   handleSearch: (text: string) => void;
 }
 
-export function Input({ grade, handleSearch }: InputProps) {
+export function Input({ handleSearch }: InputProps) {
   const [text, setText] = useState("");
 
   function handleClick() {
-    console.log(grade);
-
     handleSearch(text);
+  }
+
+  function handleKeyChange(e: React.KeyboardEvent<HTMLInputElement>) {
+    if (e.key === "Enter") handleSearch(text);
   }
 
   return (
@@ -21,6 +22,7 @@ export function Input({ grade, handleSearch }: InputProps) {
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
+        onKeyDown={handleKeyChange}
         placeholder="Введите ваш город"
       />
       <button className="button" onClick={handleClick}>

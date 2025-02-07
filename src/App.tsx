@@ -24,7 +24,7 @@ export default function App() {
 
   return (
     <div>
-      <Input handleSearch={handleSearch} grade={7} />
+      <Input handleSearch={handleSearch} />
       {weatherData && <CurrentWeather weatherData={weatherData} />}
     </div>
   );
