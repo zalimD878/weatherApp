@@ -57,10 +57,12 @@ CurrentWeatherProps) {
       </div>
 
       <p className="weather-pressure">
-        давление {weatherData.pressure}мм рт. ст.
+        давление {weatherData.pressure} мм рт. ст.
       </p>
-      <p className="weather-wind-speed">{weatherData.speed}</p>
-      <p className="weather-wind-direction">{weatherData.deg}</p>
+      <p className="weather-wind-speed">ветер {weatherData.speed} м/с</p>
+      <p className="weather-wind-direction">
+        направление ветра {weatherData.deg}
+      </p>
     </div>
   );
 }
