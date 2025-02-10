@@ -1,15 +1,25 @@
-import { getWeatherByCity } from "./api/weather";
+import { getForecastByCity, getWeatherByCity } from "./api/weather";
 import "./App.css";
 import { CurrentWeather } from "./components/CurrentWeather";
 import { Input } from "./components/input";
 import { useState } from "react";
 import { WeatherDataType } from "./types/weather";
+import { WeatherForecastList } from "./types/forecast";
+import { WeatherForecast } from "./components/weatherForecast";
 
 export default function App() {
   const [weatherData, setWeatherData] = useState<WeatherDataType | null>(null);
+  const [forecastData, setForecastData] = useState<
+    WeatherForecastList[] | null
+  >(null);
 
   const handleSearch = async (city: string) => {
     const data = await getWeatherByCity(city);
+    const dataForecast = await getForecastByCity(city);
+
+    setForecastData(dataForecast.list);
+
+    console.log(dataForecast);
 
     setWeatherData({
       description: data.weather?.[0]?.description || "",
@@ -26,6 +36,7 @@ export default function App() {
     <div>
       <Input handleSearch={handleSearch} />
       {weatherData && <CurrentWeather weatherData={weatherData} />}
+      {forecastData && <WeatherForecast forecastData={forecastData} />}
     </div>
   );
 }
