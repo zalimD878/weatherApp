@@ -42,27 +42,29 @@ export function CurrentWeather({
 //   name,
 CurrentWeatherProps) {
   return (
-    <div className="weather-container">
-      <p className="weather-city">{weatherData.name}</p>
-      <div className="weather-main">
-        <div>
-          <p className="weather-temperature">{weatherData.temp} °</p>
+    <div className="weather-container-wrapper">
+      <div className="weather-container">
+        <p className="weather-city">{weatherData.name}</p>
+        <div className="weather-main">
+          <div>
+            <p className="weather-temperature">{weatherData.temp}°</p>
+          </div>
+          <div>
+            <p className="weather-description">{weatherData.description}</p>
+            <p className="weather-feels-like">
+              ощущается как {weatherData.feels_like}
+            </p>
+          </div>
         </div>
-        <div>
-          <p className="weather-description">{weatherData.description}</p>
-          <p className="weather-feels-like">
-            ощущается как {weatherData.feels_like}
-          </p>
-        </div>
-      </div>
 
-      <p className="weather-pressure">
-        давление {weatherData.pressure} мм рт. ст.
-      </p>
-      <p className="weather-wind-speed">ветер {weatherData.speed} м/с</p>
-      <p className="weather-wind-direction">
-        направление ветра {weatherData.deg}
-      </p>
+        <p className="weather-pressure">
+          давление {weatherData.pressure} мм рт. ст.
+        </p>
+        <p className="weather-wind-speed">ветер {weatherData.speed} м/с</p>
+        <p className="weather-wind-direction">
+          направление ветра {weatherData.deg}
+        </p>
+      </div>
     </div>
   );
 }

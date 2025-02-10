@@ -14,8 +14,8 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* Центрируем по горизонтали */
+  justify-content: center; /* Центрируем по вертикали */
   height: 100vh; /* Контент занимает всю высоту экрана */
   padding: 20px;
   box-sizing: border-box;
@@ -36,10 +36,9 @@ body {
 
 .input-wrapper {
   gap: 10px;
-  width: 100%;
+  width: 70%; /* Ширина 70% от родительского контейнера */
   display: flex;
-  margin: 60px auto 50px;
-  width: 70%;
+  margin: 0 auto 20px; /* Центрируем по горизонтали и добавляем отступ снизу */
 }
 
 .input {
@@ -87,14 +86,20 @@ body {
   }
 }
 
+.weather-container-wrapper {
+  display: flex;
+  width: 57%;
+}
+
 .weather-container {
   font-family: "Arial", sans-serif;
   background: #f0f0f0;
   color: #333;
   padding: 20px;
   border-radius: 15px;
+  width: 70%; /* Ширина такая же, как у .input-wrapper */
   max-width: 300px;
-  margin: 0 auto;
+  margin: 0 auto; /* Центрируем по горизонтали */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: left;
 }
