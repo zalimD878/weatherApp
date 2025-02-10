@@ -88,7 +88,8 @@ body {
 
 .weather-container-wrapper {
   display: flex;
-  width: 57%;
+  width: 70%;
+  margin: auto;
 }
 
 .weather-container {
@@ -97,9 +98,7 @@ body {
   color: #333;
   padding: 20px;
   border-radius: 15px;
-  width: 70%; /* Ширина такая же, как у .input-wrapper */
   max-width: 300px;
-  margin: 0 auto; /* Центрируем по горизонтали */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: left;
 }
