@@ -17,10 +17,6 @@ export default function App() {
     const data = await getWeatherByCity(city);
     const dataForecast = await getForecastByCity(city);
 
-    setForecastData(dataForecast.list);
-
-    console.log(dataForecast);
-
     setWeatherData({
       description: data.weather?.[0]?.description || "",
       feels_like: data.main.feels_like,
@@ -30,6 +26,8 @@ export default function App() {
       name: data.name,
       temp: data.main.temp,
     });
+
+    setForecastData(dataForecast.list);
   };
 
   return (
