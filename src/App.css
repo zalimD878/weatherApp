@@ -90,15 +90,19 @@ body {
   display: flex;
   width: 70%;
   margin: auto;
+  flex-direction: row;
 }
 
 .weather-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   font-family: "Arial", sans-serif;
   background: #f0f0f0;
   color: #333;
   padding: 20px;
   border-radius: 15px;
-  max-width: 300px;
+  max-width: 350px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: left;
 }
@@ -111,6 +115,8 @@ body {
 
 .weather-main {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 10px;
   gap: 0px;
@@ -119,18 +125,26 @@ body {
 .weather-temperature {
   font-size: 48px;
   font-weight: bold;
-  margin-right: 10px;
+  margin-right: 20px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.description-container {
+  flex-direction: column;
 }
 
 .weather-description {
-  font-size: 18px;
+  font-size: 28px;
   color: #555;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 .weather-feels-like {
   font-size: 14px;
   color: #666;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .weather-details {

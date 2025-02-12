@@ -1,0 +1,23 @@
+<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+  <!-- Основной круг барометра -->
+  <circle cx="10" cy="10" r="9" stroke="#333" stroke-width="1" fill="#f0f0f0"/>
+  
+  <!-- Шкала барометра (деления) -->
+  <line x1="10" y1="1" x2="10" y2="3" stroke="#333" stroke-width="1"/>
+  <line x1="10" y1="17" x2="10" y2="19" stroke="#333" stroke-width="1"/>
+  <line x1="1" y1="10" x2="3" y2="10" stroke="#333" stroke-width="1"/>
+  <line x1="17" y1="10" x2="19" y2="10" stroke="#333" stroke-width="1"/>
+  
+  <!-- Стрелка барометра -->
+  <line x1="10" y1="10" x2="10" y2="2" stroke="#007BFF" stroke-width="1" marker-end="url(#arrow)" transform="rotate(45, 10, 10)"/>
+  
+  <!-- Центр барометра -->
+  <circle cx="10" cy="10" r="1" fill="#007BFF"/>
+  
+  <!-- Маркер стрелки -->
+  <defs>
+    <marker id="arrow" markerWidth="4" markerHeight="4" refX="3" refY="2" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,4 L4,2 z" fill="#007BFF"/>
+    </marker>
+  </defs>
+</svg>
