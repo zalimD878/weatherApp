@@ -8,7 +8,7 @@ body {
   color: #f8efef;
   margin: 0;
   height: 100vh; /* Высота body равна высоте экрана */
-  overflow: hidden; /* Отключаем скролл */
+  /* overflow: hidden; */
 }
 
 .container {
@@ -90,15 +90,19 @@ body {
   display: flex;
   width: 70%;
   margin: auto;
+  flex-direction: row;
 }
 
 .weather-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   font-family: "Arial", sans-serif;
   background: #f0f0f0;
   color: #333;
   padding: 20px;
   border-radius: 15px;
-  max-width: 300px;
+  max-width: 40%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: left;
 }
@@ -111,26 +115,65 @@ body {
 
 .weather-main {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 10px;
-  gap: 0px;
+  gap: 15px;
+}
+
+.temp-icon {
+  display: flex;
+  flex-direction: row;
 }
 
 .weather-temperature {
   font-size: 48px;
   font-weight: bold;
   margin-right: 10px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.weather-temp-icon {
+  margin-left: 10px;
+}
+
+.temperature-discription-block {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.description-container {
+  flex-direction: column;
 }
 
 .weather-description {
-  font-size: 18px;
+  font-size: 28px;
   color: #555;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  gap: 0px;
 }
 
 .weather-feels-like {
   font-size: 14px;
   color: #666;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+.wind-pressure-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.barometr-wind {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .weather-details {
@@ -192,4 +235,32 @@ body {
   .weather-details {
     font-size: 12px;
   }
+}
+
+.forecast {
+  width: 70%;
+  margin: 20px auto;
+
+  background: #f0f0f0;
+  color: #333;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-card {
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  padding: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.wind-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.barometr-icon {
+  width: 24px;
+  height: 24px;
 }

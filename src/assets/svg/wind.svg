@@ -1,0 +1,10 @@
+<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Первая линия (самая короткая) -->
+  <path d="M5,8 H15 M15,8 Q13,8 13,10" stroke="#007BFF" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Вторая линия (средняя длина) -->
+  <path d="M3,12 H18 M18,12 Q16,12 16,14" stroke="#007BFF" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Третья линия (самая длинная) -->
+  <path d="M2,16 H20 M20,16 Q18,16 18,18" stroke="#007BFF" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+</svg>
