@@ -113,6 +113,7 @@ export interface Sys {
 
 export interface WeatherDataType {
   description: string;
+  icon: string;
   feels_like: number;
   pressure: number;
   speed: number;

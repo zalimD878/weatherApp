@@ -19,6 +19,7 @@ export default function App() {
 
     setWeatherData({
       description: data.weather?.[0]?.description || "",
+      icon: data.weather?.[0]?.icon || "",
       feels_like: data.main.feels_like,
       pressure: data.main.pressure,
       speed: data.wind.speed,
