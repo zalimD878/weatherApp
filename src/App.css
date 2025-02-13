@@ -130,22 +130,28 @@ body {
 .weather-temperature {
   font-size: 48px;
   font-weight: bold;
-  margin-right: 10px;
+  /* margin-right: 10px; */
   margin-top: 0px;
   margin-bottom: 5px;
 }
 
 .weather-temp-icon {
+  height: 60px;
+  width: 60px;
   margin-left: 10px;
 }
 
 .temperature-discription-block {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+}
+
+.img-des-container {
+  display: flex;
 }
 
 .description-container {
+  display: flex;
   flex-direction: column;
 }
 

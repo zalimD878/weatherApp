@@ -22,19 +22,20 @@ export function CurrentWeather({ weatherData }: CurrentWeatherProps) {
         <p className="weather-city">{weatherData.name}</p>
         <div className="weather-main">
           <div className="temperature-discription-block">
-            <div className="temp-icon">
-              <p className="weather-temperature">{weatherData.temp}°</p>
+            {/* <div className="temp-icon"> */}
+            <p className="weather-temperature">{weatherData.temp}°</p>
+            {/* </div> */}
+            <div className="img-des-container">
               <img
                 src={`https://openweathermap.org/img/w/${weatherData.icon}.png`}
                 className="weather-temp-icon"
               />
-            </div>
-
-            <div className="description-container">
-              <p className="weather-description">{weatherData.description}</p>
-              <p className="weather-feels-like">
-                ощущается как {weatherData.feels_like}
-              </p>
+              <div className="description-container">
+                <p className="weather-description">{weatherData.description}</p>
+                <p className="weather-feels-like">
+                  ощущается как {weatherData.feels_like}
+                </p>
+              </div>
             </div>
           </div>
           <div className="wind-pressure-container">
