@@ -53,6 +53,33 @@ body {
   outline: none;
 }
 
+.input-cleaner {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.input-cleaner button {
+  display: flex;
+  position: absolute;
+  align-items: stretch;
+  top: 15px;
+  right: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 15px;
+}
+
+/* .input-cleaner button:hover {
+  background-color: transparent;
+} */
+
+.clean-button {
+  align-items: stretch;
+}
+
 .button {
   background-color: #e02444;
   border: none;

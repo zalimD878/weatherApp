@@ -17,15 +17,23 @@ export function Input({ handleSearch }: InputProps) {
 
   return (
     <div className="input-wrapper">
-      <input
-        className="input"
-        type="text"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-        onKeyDown={handleKeyChange}
-        placeholder="Введите ваш город"
-      />
-      <button className="button" onClick={handleClick}>
+      <div className="input-cleaner">
+        <input
+          className="input"
+          type="text"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          onKeyDown={handleKeyChange}
+          placeholder="Введите ваш город"
+        />
+        {text && (
+          <button className="clean-button" onClick={() => setText("")}>
+            X
+          </button>
+        )}
+      </div>
+
+      <button className="button" onClick={handleClick} disabled={!text}>
         Поиск
       </button>
     </div>

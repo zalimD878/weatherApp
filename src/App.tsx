@@ -14,6 +14,8 @@ export default function App() {
   >(null);
 
   const handleSearch = async (city: string) => {
+    if (!city) return;
+
     const data = await getWeatherByCity(city);
     const dataForecast = await getForecastByCity(city);
 
