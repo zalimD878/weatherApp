@@ -63,8 +63,8 @@ body {
   display: flex;
   position: absolute;
   align-items: stretch;
-  top: 15px;
-  right: 10px;
+  top: 10px;
+  right: 2px;
   outline: none;
   border: none;
   cursor: pointer;

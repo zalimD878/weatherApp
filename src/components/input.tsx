@@ -1,4 +1,5 @@
 import { useState } from "react";
+import cross from "../assets/svg/text-clean.svg";
 
 interface InputProps {
   handleSearch: (text: string) => void;
@@ -28,7 +29,7 @@ export function Input({ handleSearch }: InputProps) {
         />
         {text && (
           <button className="clean-button" onClick={() => setText("")}>
-            X
+            <img src={cross} alt="" />
           </button>
         )}
       </div>
