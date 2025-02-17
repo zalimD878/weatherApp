@@ -9,9 +9,7 @@ interface InputProps {
 
 export function Input({ handleSearch }: InputProps) {
   const [text, setText] = useState("");
-  const [autocompleteList, setAutocompleteList] = useState<AutocompleteType[]>(
-    []
-  );
+  const [autocompleteList, setAutocompleteList] = useState<string[]>([]);
 
   function handleClick() {
     handleSearch(text);
@@ -24,7 +22,10 @@ export function Input({ handleSearch }: InputProps) {
   async function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setText(e.target.value);
     const autocompleteData = await getAutocomplete(text);
-    setAutocompleteList(autocompleteData);
+    const cities = autocompleteData
+      .map((c) => c.city_name)
+      .filter((c) => c !== undefined);
+    setAutocompleteList(cities);
   }
 
   return (
@@ -54,7 +55,7 @@ export function Input({ handleSearch }: InputProps) {
       <div>
         <ul>
           {autocompleteList.map((i) => {
-            return <li>{i.city_name}</li>;
+            return <li onClick={() => setText(i || "")}>{i}</li>;
           })}
         </ul>
       </div>
