@@ -52,7 +52,6 @@ body {
   color: black;
   padding: 10px 20px;
   font-size: 16px;
-  margin: 4px 2px;
   border-radius: 5px;
   outline: none;
 }
@@ -67,7 +66,7 @@ body {
   display: flex;
   position: absolute;
   align-items: stretch;
-  top: 10px;
+  top: 7px;
   right: 2px;
   outline: none;
   border: none;
@@ -87,7 +86,7 @@ body {
 .autocoplete {
   position: absolute;
   display: flex;
-  width: 100%;
+  width: calc(100% - 90px);
   margin: 0 auto;
   background-color: #f0f0f0;
   color: #333;
@@ -100,33 +99,20 @@ body {
   background-color: #e02444;
   border: none;
   color: white;
-  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  animation: pulse 1.5s infinite;
+  width: 80px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 
 .button:hover {
   background-color: #e64c8c;
-  transform: scale(1.1);
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 
 .weather-container-wrapper {
