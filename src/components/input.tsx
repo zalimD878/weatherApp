@@ -1,7 +1,7 @@
 import { useState } from "react";
 import cross from "../assets/svg/text-clean.svg";
 import { getAutocomplete } from "../api/autocomplete";
-import { AutocompleteType } from "../types/autocomplete";
+import OutsideClickHandler from "react-outside-click-handler";
 
 interface InputProps {
   handleSearch: (text: string) => void;
@@ -13,10 +13,14 @@ export function Input({ handleSearch }: InputProps) {
 
   function handleClick() {
     handleSearch(text);
+    setAutocompleteList([]);
   }
 
   function handleKeyChange(e: React.KeyboardEvent<HTMLInputElement>) {
-    if (e.key === "Enter") handleSearch(text);
+    if (e.key === "Enter") {
+      handleSearch(text);
+      setAutocompleteList([]);
+    }
   }
 
   async function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -34,38 +38,40 @@ export function Input({ handleSearch }: InputProps) {
   }
 
   return (
-    <div className="input-container">
-      <div className="input-wrapper">
-        <div className="input-cleaner">
-          <input
-            className="input"
-            type="text"
-            value={text}
-            onChange={handleChange}
-            onKeyDown={handleKeyChange}
-            placeholder="Введите ваш город"
-          />
-          {text && (
-            <button className="clean-button" onClick={() => setText("")}>
-              <img src={cross} alt="" />
-            </button>
-          )}
+    <OutsideClickHandler onOutsideClick={() => handleAutocompleteClick(text)}>
+      <div className="input-container">
+        <div className="input-wrapper">
+          <div className="input-cleaner">
+            <input
+              className="input"
+              type="text"
+              value={text}
+              onChange={handleChange}
+              onKeyDown={handleKeyChange}
+              placeholder="Введите ваш город"
+            />
+            {text && (
+              <button className="clean-button" onClick={() => setText("")}>
+                <img src={cross} alt="" />
+              </button>
+            )}
+          </div>
+
+          <button className="button" onClick={handleClick} disabled={!text}>
+            Поиск
+          </button>
         </div>
 
-        <button className="button" onClick={handleClick} disabled={!text}>
-          Поиск
-        </button>
+        {autocompleteList.length > 0 && (
+          <div className="autocoplete">
+            <ul>
+              {autocompleteList.map((i) => {
+                return <li onClick={() => handleAutocompleteClick(i)}>{i}</li>;
+              })}
+            </ul>
+          </div>
+        )}
       </div>
-
-      {autocompleteList.length > 0 && (
-        <div className="autocoplete">
-          <ul>
-            {autocompleteList.map((i) => {
-              return <li onClick={() => handleAutocompleteClick(i)}>{i}</li>;
-            })}
-          </ul>
-        </div>
-      )}
-    </div>
+    </OutsideClickHandler>
   );
 }
