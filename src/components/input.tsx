@@ -29,7 +29,7 @@ export function Input({ handleSearch }: InputProps) {
   }
 
   return (
-    <div>
+    <div className="input-container">
       <div className="input-wrapper">
         <div className="input-cleaner">
           <input
@@ -52,13 +52,15 @@ export function Input({ handleSearch }: InputProps) {
         </button>
       </div>
 
-      <div>
-        <ul>
-          {autocompleteList.map((i) => {
-            return <li onClick={() => setText(i || "")}>{i}</li>;
-          })}
-        </ul>
-      </div>
+      {autocompleteList.length > 0 && (
+        <div className="autocoplete">
+          <ul>
+            {autocompleteList.map((i) => {
+              return <li onClick={() => setText(i || "")}>{i}</li>;
+            })}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }

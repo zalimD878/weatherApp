@@ -34,11 +34,15 @@ body {
   letter-spacing: 2px;
 }
 
+.input-container {
+  position: relative;
+  width: 70%; /* Ширина 70% от родительского контейнера */
+  margin: 0 auto 20px; /* Центрируем по горизонтали и добавляем отступ снизу */
+}
+
 .input-wrapper {
   gap: 10px;
-  width: 70%; /* Ширина 70% от родительского контейнера */
   display: flex;
-  margin: 0 auto 20px; /* Центрируем по горизонтали и добавляем отступ снизу */
 }
 
 .input {
@@ -78,6 +82,18 @@ body {
 
 .clean-button {
   align-items: stretch;
+}
+
+.autocoplete {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 5px;
+  top: 50px;
+  left: 0;
 }
 
 .button {
