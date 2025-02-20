@@ -28,6 +28,11 @@ export function Input({ handleSearch }: InputProps) {
     setAutocompleteList(cities);
   }
 
+  function handleAutocompleteClick(i: string) {
+    setText(i || "");
+    setAutocompleteList([]);
+  }
+
   return (
     <div className="input-container">
       <div className="input-wrapper">
@@ -56,7 +61,7 @@ export function Input({ handleSearch }: InputProps) {
         <div className="autocoplete">
           <ul>
             {autocompleteList.map((i) => {
-              return <li onClick={() => setText(i || "")}>{i}</li>;
+              return <li onClick={() => handleAutocompleteClick(i)}>{i}</li>;
             })}
           </ul>
         </div>
