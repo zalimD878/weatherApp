@@ -34,6 +34,7 @@ export function Input({ handleSearch }: InputProps) {
 
   function handleAutocompleteClick(i: string) {
     setText(i || "");
+    handleSearch(i);
     setAutocompleteList([]);
   }
 

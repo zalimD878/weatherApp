@@ -220,58 +220,6 @@ body {
   margin-bottom: 5px;
 }
 
-/* Адаптация для мобильных устройств */
-@media (max-width: 480px) {
-  body {
-    background-attachment: scroll; /* Отключаем фиксацию фона на мобильных */
-  }
-
-  .site-title {
-    font-size: 28px;
-    margin: 10px 0;
-  }
-
-  .input-wrapper {
-    flex-direction: column;
-    width: 90%;
-    margin: 30px auto 20px;
-  }
-
-  .input {
-    font-size: 14px;
-    padding: 8px 15px;
-    width: auto;
-  }
-
-  .button {
-    font-size: 14px;
-    padding: 8px 15px;
-    width: 100%;
-  }
-
-  .weather-container {
-    padding: 15px;
-    max-width: 90%;
-  }
-
-  .weather-temperature {
-    font-size: 36px;
-  }
-
-  .weather-city {
-    font-size: 20px;
-  }
-
-  .weather-description {
-    font-size: 16px;
-  }
-
-  .weather-feels-like,
-  .weather-details {
-    font-size: 12px;
-  }
-}
-
 .forecast {
   width: 70%;
   margin: 20px auto;
