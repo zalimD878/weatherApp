@@ -2,6 +2,7 @@ import { useState } from "react";
 import cross from "../assets/svg/text-clean.svg";
 import { getAutocomplete } from "../api/autocomplete";
 import OutsideClickHandler from "react-outside-click-handler";
+import getSeasonClass from "../utils/seasons";
 
 interface InputProps {
   handleSearch: (text: string) => void;
@@ -38,6 +39,8 @@ export function Input({ handleSearch }: InputProps) {
     setAutocompleteList([]);
   }
 
+  const season = getSeasonClass();
+
   return (
     <OutsideClickHandler onOutsideClick={() => handleAutocompleteClick(text)}>
       <div className="input-container">
@@ -58,7 +61,11 @@ export function Input({ handleSearch }: InputProps) {
             )}
           </div>
 
-          <button className="button" onClick={handleClick} disabled={!text}>
+          <button
+            className={`button-${season}`}
+            onClick={handleClick}
+            disabled={!text}
+          >
             Поиск
           </button>
         </div>

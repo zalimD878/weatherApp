@@ -3,9 +3,22 @@ body {
   height: 100%;
 }
 
-.background {
+.background-spring {
   background-color: rgb(142, 204, 235);
-  background-image: url("./assets/Blue-Snow-Wallpaper-HD.jpg");
+  background-image: url("./assets/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* Фон фиксируется при скролле */
+  color: #f8efef;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.background-winter {
+  background-color: rgb(142, 204, 235);
+  background-image: url("./assets/wall-winter.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -27,7 +40,7 @@ body {
 }
 
 /* Остальные стили остаются без изменений */
-.site-title {
+.site-title-spring {
   font-family: "Arial", sans-serif;
   font-size: 38px;
   font-weight: bold;
@@ -39,7 +52,23 @@ body {
   letter-spacing: 2px;
 }
 
-.site-title h1 {
+.site-title-spring h1 {
+  margin: 0;
+}
+
+.site-title-winter {
+  font-family: "Arial", sans-serif;
+  font-size: 38px;
+  font-weight: bold;
+  background-color: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  padding: 20px 0;
+  letter-spacing: 2px;
+}
+
+.site-title-winter h1 {
   margin: 0;
 }
 
@@ -104,7 +133,7 @@ body {
   left: 0;
 }
 
-.button {
+.button-spring {
   background-color: #e02444;
   border: none;
   color: white;
@@ -120,8 +149,28 @@ body {
   flex-grow: 0;
 }
 
-.button:hover {
+.button-spring:hover {
   background-color: #e64c8c;
+}
+
+.button-winter {
+  background-color: #2485e0;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 80px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.button-winter:hover {
+  background-color: #594ce6;
 }
 
 .weather-container-wrapper {

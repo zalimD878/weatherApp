@@ -6,6 +6,7 @@ import { useState } from "react";
 import { WeatherDataType } from "./types/weather";
 import { WeatherForecastList } from "./types/forecast";
 import { WeatherForecast } from "./components/weatherForecast";
+import getSeasonClass from "./utils/seasons";
 
 export default function App() {
   const [weatherData, setWeatherData] = useState<WeatherDataType | null>(null);
@@ -33,9 +34,11 @@ export default function App() {
     setForecastData(dataForecast.list);
   };
 
+  const season = getSeasonClass();
+
   return (
-    <div className="background">
-      <header className="site-title">
+    <div className={`background-${season}`}>
+      <header className={`site-title-${season}`}>
         <h1>WeatherApp</h1>
       </header>
 
