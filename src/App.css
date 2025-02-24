@@ -247,3 +247,89 @@ body {
   width: 24px;
   height: 24px;
 }
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* Убираем фиксированный фон для мобильных устройств */
+  }
+
+  .container {
+    padding: 10px; /* Уменьшаем отступы */
+    height: auto; /* Высота контейнера адаптируется под контент */
+    min-height: 100vh; /* Минимальная высота равна высоте экрана */
+  }
+
+  .site-title {
+    font-size: 28px; /* Уменьшаем размер заголовка */
+    margin: 10px 0; /* Уменьшаем отступы */
+  }
+
+  .input-container {
+    width: 90%; /* Увеличиваем ширину для мобильных устройств */
+  }
+  .input-cleaner button {
+    position: absolute;
+    align-items: stretch;
+    right: 1px;
+    top: 3px;
+  }
+
+  .input {
+    font-size: 14px; /* Уменьшаем размер шрифта */
+    padding: 8px 16px; /* Уменьшаем отступы */
+  }
+
+  .button {
+    width: 70px; /* Уменьшаем ширину кнопки */
+    font-size: 14px; /* Уменьшаем размер шрифта */
+  }
+
+  .weather-container-wrapper {
+    width: 90%; /* Увеличиваем ширину для мобильных устройств */
+    flex-direction: column; /* Меняем направление на вертикальное */
+  }
+
+  .weather-container {
+    max-width: 100%; /* Контейнер занимает всю ширину */
+    margin-bottom: 20px; /* Добавляем отступ между блоками */
+  }
+
+  .weather-main {
+    flex-direction: column; /* Меняем направление на вертикальное */
+    align-items: flex-start; /* Выравниваем элементы по левому краю */
+  }
+
+  .weather-temperature {
+    font-size: 36px; /* Уменьшаем размер температуры */
+  }
+
+  .weather-temp-icon {
+    height: 40px; /* Уменьшаем размер иконки */
+    width: 40px;
+  }
+
+  .weather-description {
+    font-size: 20px; /* Уменьшаем размер описания */
+  }
+
+  .wind-pressure-container {
+    flex-direction: column; /* Меняем направление на вертикальное */
+    align-items: flex-start; /* Выравниваем элементы по левому краю */
+    gap: 5px; /* Уменьшаем расстояние между элементами */
+  }
+
+  .forecast {
+    width: 90%; /* Увеличиваем ширину для мобильных устройств */
+  }
+
+  .forecast-card {
+    padding: 8px; /* Уменьшаем отступы */
+  }
+
+  .wind-icon,
+  .barometr-icon {
+    width: 20px; /* Уменьшаем размер иконок */
+    height: 20px;
+  }
+}
