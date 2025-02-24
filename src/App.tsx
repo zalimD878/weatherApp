@@ -34,7 +34,11 @@ export default function App() {
   };
 
   return (
-    <div>
+    <div className="background">
+      <header className="site-title">
+        <h1>WeatherApp</h1>
+      </header>
+
       <Input handleSearch={handleSearch} />
       {weatherData && <CurrentWeather weatherData={weatherData} />}
       {forecastData && <WeatherForecast forecastData={forecastData} />}

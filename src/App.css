@@ -1,14 +1,19 @@
 body {
+  margin: 0;
+  height: 100%;
+}
+
+.background {
   background-color: rgb(142, 204, 235);
-  background-image: url("./assets/bg.jpg");
+  background-image: url("./assets/Blue-Snow-Wallpaper-HD.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed; /* Фон фиксируется при скролле */
   color: #f8efef;
   margin: 0;
-  height: 100vh; /* Высота body равна высоте экрана */
-  /* overflow: hidden; */
+  height: 100vh;
+  width: 100%;
 }
 
 .container {
@@ -30,8 +35,12 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
-  margin: 20px 0;
+  padding: 20px 0;
   letter-spacing: 2px;
+}
+
+.site-title h1 {
+  margin: 0;
 }
 
 .input-container {
