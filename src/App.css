@@ -29,6 +29,32 @@ body {
   width: 100%;
 }
 
+.background-summer {
+  background-color: rgb(142, 204, 235);
+  background-image: url("./assets/sum-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* Фон фиксируется при скролле */
+  color: #f8efef;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.background-fall {
+  background-color: rgb(142, 204, 235);
+  background-image: url("./assets/fall-bg-2.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* Фон фиксируется при скролле */
+  color: #f8efef;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -72,6 +98,23 @@ body {
   margin: 0;
 }
 
+.site-title-summer {
+  font-family: "Arial", sans-serif;
+  font-size: 38px;
+  font-weight: bold;
+  background-color: rgb(5, 243, 29);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  padding: 20px 0;
+  letter-spacing: 2px;
+}
+
+.site-title-summer h1 {
+  margin: 0;
+  text-shadow: 1px 1px rgb(7, 225, 7);
+}
+
 .input-container {
   position: relative;
   width: 70%; /* Ширина 70% от родительского контейнера */
@@ -83,10 +126,32 @@ body {
   display: flex;
 }
 
-.input {
+.input-spring {
   width: 100%;
   background-color: #f5f2f2;
   border: none;
+  color: black;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.input-winter {
+  width: 100%;
+  background-color: #f5f2f2;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.input-summer {
+  width: 100%;
+  background-color: #f5f2f2;
+  border: 2px solid rgb(28, 245, 36);
   color: black;
   padding: 10px 20px;
   font-size: 16px;
@@ -171,6 +236,26 @@ body {
 
 .button-winter:hover {
   background-color: #594ce6;
+}
+
+.button-summer {
+  background-color: #24e05c;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 80px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.button-summer:hover {
+  background-color: #09703b;
 }
 
 .weather-container-wrapper {
@@ -318,7 +403,12 @@ body {
     min-height: 100vh; /* Минимальная высота равна высоте экрана */
   }
 
-  .site-title {
+  .site-title-spring {
+    font-size: 28px; /* Уменьшаем размер заголовка */
+    margin: 10px 0; /* Уменьшаем отступы */
+  }
+
+  .site-title-winter {
     font-size: 28px; /* Уменьшаем размер заголовка */
     margin: 10px 0; /* Уменьшаем отступы */
   }
@@ -338,7 +428,12 @@ body {
     padding: 8px 16px; /* Уменьшаем отступы */
   }
 
-  .button {
+  .button-spring {
+    width: 70px; /* Уменьшаем ширину кнопки */
+    font-size: 14px; /* Уменьшаем размер шрифта */
+  }
+
+  .button-winter {
     width: 70px; /* Уменьшаем ширину кнопки */
     font-size: 14px; /* Уменьшаем размер шрифта */
   }
