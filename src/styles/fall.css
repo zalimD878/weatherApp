@@ -1,0 +1,39 @@
+.background-fall {
+  background-image: url("../assets/autumn-2-bg.jpg");
+}
+
+.site-title-fall {
+  font-family: "Arial", sans-serif;
+  font-size: 38px;
+  font-weight: bold;
+  background-color: rgb(253, 6, 6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  padding: 20px 0;
+  letter-spacing: 2px;
+}
+
+.site-title-fall h1 {
+  margin: 0;
+}
+
+.button-fall {
+  background-color: #fc0606;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 80px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.button-fall:hover {
+  background-color: #970909;
+}

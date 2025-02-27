@@ -30,7 +30,7 @@ export function Input({ handleSearch }: InputProps) {
     const cities = autocompleteData
       .map((c) => c.city_name)
       .filter((c) => c !== undefined);
-    setAutocompleteList(cities);
+    setAutocompleteList(cities.map((c) => c.toLowerCase()));
   }
 
   function handleAutocompleteClick(i: string) {
@@ -72,9 +72,13 @@ export function Input({ handleSearch }: InputProps) {
 
         {autocompleteList.length > 0 && (
           <div className="autocoplete">
-            <ul>
+            <ul className="ul">
               {autocompleteList.map((i) => {
-                return <li onClick={() => handleAutocompleteClick(i)}>{i}</li>;
+                return (
+                  <li className="li" onClick={() => handleAutocompleteClick(i)}>
+                    {i}
+                  </li>
+                );
               })}
             </ul>
           </div>

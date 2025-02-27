@@ -1,0 +1,39 @@
+.background-spring {
+  background-image: url("../assets/bg.jpg");
+}
+
+.site-title-spring {
+  font-family: "Arial", sans-serif;
+  font-size: 38px;
+  font-weight: bold;
+  background: linear-gradient(45deg, rgb(235, 145, 145), #ec062d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  padding: 20px 0;
+  letter-spacing: 2px;
+}
+
+.site-title-spring h1 {
+  margin: 0;
+}
+
+.button-spring {
+  background-color: #e02444;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 80px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.button-spring:hover {
+  background-color: #e64c8c;
+}

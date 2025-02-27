@@ -1,4 +1,8 @@
 @import url("./styles/winter.css");
+@import url("./styles/summer.css");
+@import url("./styles/fall.css");
+@import url("./styles/spring.css");
+/* @import url("./styles/mobile-adaptation.css"); */
 
 body {
   margin: 0;
@@ -15,18 +19,7 @@ body {
   margin: 0;
   height: 100vh;
   width: 100%;
-}
-
-.background-summer {
-  background-image: url("./assets/sum-bg.jpg");
-}
-
-.background-fall {
-  background-image: url("./assets/autumn-2-bg.jpg");
-}
-
-.background-spring {
-  background-image: url("./assets/bg.jpg");
+  padding: 20px 0;
 }
 
 .container {
@@ -40,54 +33,6 @@ body {
 }
 
 /* Остальные стили остаются без изменений */
-.site-title-spring {
-  font-family: "Arial", sans-serif;
-  font-size: 38px;
-  font-weight: bold;
-  background: linear-gradient(45deg, rgb(235, 145, 145), #ec062d);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-  padding: 20px 0;
-  letter-spacing: 2px;
-}
-
-.site-title-spring h1 {
-  margin: 0;
-}
-
-.site-title-summer {
-  font-family: "Arial", sans-serif;
-  font-size: 38px;
-  font-weight: bold;
-  background-color: rgb(5, 243, 29);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-  padding: 20px 0;
-  letter-spacing: 2px;
-}
-
-.site-title-summer h1 {
-  margin: 0;
-  text-shadow: 1px 1px rgb(7, 225, 7);
-}
-
-.site-title-fall {
-  font-family: "Arial", sans-serif;
-  font-size: 38px;
-  font-weight: bold;
-  background-color: rgb(253, 6, 6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-  padding: 20px 0;
-  letter-spacing: 2px;
-}
-
-.site-title-fall h1 {
-  margin: 0;
-}
 
 .input-container {
   position: relative;
@@ -152,68 +97,8 @@ body {
   background-color: #f0f0f0;
   color: #333;
   border-radius: 5px;
-  top: 50px;
+  top: 45px;
   left: 0;
-}
-
-.button-spring {
-  background-color: #e02444;
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  width: 80px;
-  box-sizing: border-box;
-  flex-shrink: 0;
-  flex-grow: 0;
-}
-
-.button-spring:hover {
-  background-color: #e64c8c;
-}
-
-.button-summer {
-  background-color: #24e05c;
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  width: 80px;
-  box-sizing: border-box;
-  flex-shrink: 0;
-  flex-grow: 0;
-}
-
-.button-summer:hover {
-  background-color: #09703b;
-}
-
-.button-fall {
-  background-color: #fc0606;
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  width: 80px;
-  box-sizing: border-box;
-  flex-shrink: 0;
-  flex-grow: 0;
-}
-
-.button-fall:hover {
-  background-color: #970909;
 }
 
 .weather-container-wrapper {
@@ -323,7 +208,8 @@ body {
 
 .forecast {
   width: 70%;
-  margin: 20px auto;
+  margin: 0 auto;
+  margin-top: 20px;
   background: #f0f0f05e;
   color: white;
   border-radius: 15px;
@@ -350,12 +236,38 @@ body {
   height: 24px;
 }
 
-/* Мобильная адаптация */
+.ul {
+  display: block;
+  width: 100%;
+  list-style-type: none;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 20px;
+  unicode-bidi: isolate;
+}
+
+.li {
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+}
+
+.li:hover {
+  background-color: #beb8b88e;
+}
+
 @media (max-width: 768px) {
   body {
-    background-attachment: scroll; /* Убираем фиксированный фон для мобильных устройств */
+    background-attachment: scroll;
+    margin: 0; /* Убираем фиксированный фон для мобильных устройств */
   }
 
+  .background {
+    height: auto;
+    min-height: 100vh;
+  }
   .container {
     padding: 10px; /* Уменьшаем отступы */
     height: auto; /* Высота контейнера адаптируется под контент */
@@ -364,12 +276,18 @@ body {
 
   .site-title-spring {
     font-size: 28px; /* Уменьшаем размер заголовка */
-    margin: 10px 0; /* Уменьшаем отступы */
   }
 
   .site-title-winter {
     font-size: 28px; /* Уменьшаем размер заголовка */
-    margin: 10px 0; /* Уменьшаем отступы */
+  }
+
+  .site-title-summer {
+    font-size: 28px; /* Уменьшаем размер заголовка */
+  }
+
+  .site-title-fall {
+    font-size: 28px; /* Уменьшаем размер заголовка */
   }
 
   .input-container {
@@ -397,6 +315,16 @@ body {
     font-size: 14px; /* Уменьшаем размер шрифта */
   }
 
+  .button-summer {
+    width: 70px; /* Уменьшаем ширину кнопки */
+    font-size: 14px; /* Уменьшаем размер шрифта */
+  }
+
+  .button-fall {
+    width: 70px; /* Уменьшаем ширину кнопки */
+    font-size: 14px; /* Уменьшаем размер шрифта */
+  }
+
   .weather-container-wrapper {
     width: 90%; /* Увеличиваем ширину для мобильных устройств */
     flex-direction: column; /* Меняем направление на вертикальное */
@@ -404,7 +332,6 @@ body {
 
   .weather-container {
     max-width: 100%; /* Контейнер занимает всю ширину */
-    margin-bottom: 20px; /* Добавляем отступ между блоками */
   }
 
   .weather-main {
