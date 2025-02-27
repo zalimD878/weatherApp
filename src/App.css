@@ -117,7 +117,7 @@ body {
   color: white;
   padding: 20px;
   border-radius: 15px;
-  max-width: 40%;
+  max-width: 50%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: left;
 }
@@ -211,14 +211,14 @@ body {
   margin: 0 auto;
   margin-top: 20px;
   background: #f0f0f05e;
-  color: white;
   border-radius: 15px;
+  color: white;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .forecast-card {
   /* border-radius: 15px; */
-  border-right: solid 1px rgba(41, 39, 39, 0.433);
+  border-right: solid 1px rgba(63, 61, 61, 0.433);
   /* border: 1px solid rgba(0, 0, 0, 0.1); */
   margin-bottom: 10px;
   padding: 12px;
@@ -240,11 +240,7 @@ body {
   display: block;
   width: 100%;
   list-style-type: none;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 20px;
+  padding-left: 0;
   unicode-bidi: isolate;
 }
 
@@ -253,16 +249,21 @@ body {
   font-family: sans-serif;
   font-size: 16px;
   gap: inherit;
-  margin-bottom: 13px;
   display: flex;
-  width: 100%;
   cursor: pointer;
+  padding: 10px 20px;
+  transition: all linear 0.2s;
 }
 
 .li:hover {
   background-color: #b4b0b049;
 }
 
+@media (max-width: 1200px) {
+  .weather-container {
+    max-width: 100%;
+  }
+}
 @media (max-width: 768px) {
   body {
     background-attachment: scroll;
