@@ -1,12 +1,12 @@
-.background-winter {
-  background-image: url("../assets/wall-winter.jpg");
+.background-spring {
+  background-image: url("../assets/bg.jpg");
 }
 
-.site-title-winter {
+.site-title-spring {
   font-family: "Arial", sans-serif;
   font-size: 38px;
   font-weight: bold;
-  background-color: white;
+  background: linear-gradient(45deg, rgb(235, 145, 145), #ec062d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
@@ -14,15 +14,12 @@
   letter-spacing: 2px;
 }
 
-.site-title-winter h1 {
+.site-title-spring h1 {
   margin: 0;
 }
 
-.input-winter {
-}
-
-.button-winter {
-  background-color: #2485e0;
+.button-spring {
+  background-color: #e02444;
   border: none;
   color: white;
   text-align: center;
@@ -37,6 +34,6 @@
   flex-grow: 0;
 }
 
-.button-winter:hover {
-  background-color: #594ce6;
+.button-spring:hover {
+  background-color: #e64c8c;
 }

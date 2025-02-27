@@ -1,12 +1,12 @@
-.background-winter {
-  background-image: url("../assets/wall-winter.jpg");
+.background-summer {
+  background-image: url("../assets/sum-bg.jpg");
 }
 
-.site-title-winter {
+.site-title-summer {
   font-family: "Arial", sans-serif;
   font-size: 38px;
   font-weight: bold;
-  background-color: white;
+  background-color: rgb(5, 243, 29);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
@@ -14,15 +14,13 @@
   letter-spacing: 2px;
 }
 
-.site-title-winter h1 {
+.site-title-summer h1 {
   margin: 0;
+  text-shadow: 1px 1px rgb(7, 225, 7);
 }
 
-.input-winter {
-}
-
-.button-winter {
-  background-color: #2485e0;
+.button-summer {
+  background-color: #24e05c;
   border: none;
   color: white;
   text-align: center;
@@ -37,6 +35,6 @@
   flex-grow: 0;
 }
 
-.button-winter:hover {
-  background-color: #594ce6;
+.button-summer:hover {
+  background-color: #09703b;
 }

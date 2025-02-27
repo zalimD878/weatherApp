@@ -2,6 +2,7 @@ import { useState } from "react";
 import cross from "../assets/svg/text-clean.svg";
 import { getAutocomplete } from "../api/autocomplete";
 import OutsideClickHandler from "react-outside-click-handler";
+import getSeasonClass from "../utils/seasons";
 
 interface InputProps {
   handleSearch: (text: string) => void;
@@ -29,7 +30,7 @@ export function Input({ handleSearch }: InputProps) {
     const cities = autocompleteData
       .map((c) => c.city_name)
       .filter((c) => c !== undefined);
-    setAutocompleteList(cities);
+    setAutocompleteList(cities.map((c) => c.toLowerCase()));
   }
 
   function handleAutocompleteClick(i: string) {
@@ -38,13 +39,15 @@ export function Input({ handleSearch }: InputProps) {
     setAutocompleteList([]);
   }
 
+  const season = getSeasonClass();
+
   return (
     <OutsideClickHandler onOutsideClick={() => handleAutocompleteClick(text)}>
       <div className="input-container">
         <div className="input-wrapper">
           <div className="input-cleaner">
             <input
-              className="input"
+              className={`input input-${season}`}
               type="text"
               value={text}
               onChange={handleChange}
@@ -58,16 +61,24 @@ export function Input({ handleSearch }: InputProps) {
             )}
           </div>
 
-          <button className="button" onClick={handleClick} disabled={!text}>
+          <button
+            className={`button-${season}`}
+            onClick={handleClick}
+            disabled={!text}
+          >
             Поиск
           </button>
         </div>
 
         {autocompleteList.length > 0 && (
           <div className="autocoplete">
-            <ul>
+            <ul className="ul">
               {autocompleteList.map((i) => {
-                return <li onClick={() => handleAutocompleteClick(i)}>{i}</li>;
+                return (
+                  <li className="li" onClick={() => handleAutocompleteClick(i)}>
+                    {i}
+                  </li>
+                );
               })}
             </ul>
           </div>
