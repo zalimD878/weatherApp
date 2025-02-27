@@ -1,0 +1,42 @@
+.background-winter {
+  background-image: url("../assets/wall-winter.jpg");
+}
+
+.site-title-winter {
+  font-family: "Arial", sans-serif;
+  font-size: 38px;
+  font-weight: bold;
+  background-color: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  padding: 20px 0;
+  letter-spacing: 2px;
+}
+
+.site-title-winter h1 {
+  margin: 0;
+}
+
+.input-winter {
+}
+
+.button-winter {
+  background-color: #2485e0;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 80px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.button-winter:hover {
+  background-color: #594ce6;
+}

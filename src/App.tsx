@@ -1,6 +1,5 @@
 import { getForecastByCity, getWeatherByCity } from "./api/weather";
 import "./App.css";
-import "./styles/winter.css";
 import { CurrentWeather } from "./components/CurrentWeather";
 import { Input } from "./components/input";
 import { useState } from "react";
@@ -38,7 +37,7 @@ export default function App() {
   const season = getSeasonClass();
 
   return (
-    <div className={`background-fall`}>
+    <div className={`background background-${season}`}>
       <header className={`site-title-${season}`}>
         <h1>WeatherApp</h1>
       </header>

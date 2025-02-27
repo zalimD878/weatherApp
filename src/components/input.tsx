@@ -47,7 +47,7 @@ export function Input({ handleSearch }: InputProps) {
         <div className="input-wrapper">
           <div className="input-cleaner">
             <input
-              className={`input-${season}`}
+              className={`input input-${season}`}
               type="text"
               value={text}
               onChange={handleChange}
