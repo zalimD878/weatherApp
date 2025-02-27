@@ -249,13 +249,18 @@ body {
 }
 
 .li {
+  color: black;
+  font-family: sans-serif;
+  font-size: 16px;
+  gap: inherit;
+  margin-bottom: 13px;
   display: flex;
   width: 100%;
   cursor: pointer;
 }
 
 .li:hover {
-  background-color: #beb8b88e;
+  background-color: #b4b0b049;
 }
 
 @media (max-width: 768px) {
