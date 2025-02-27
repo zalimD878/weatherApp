@@ -1,4 +1,5 @@
 import { WeatherForecastList } from "../types/forecast";
+// @ts-ignore
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 
