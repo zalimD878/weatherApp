@@ -1,5 +1,5 @@
 export default function getSeasonClass() {
-  return "summer";
+  return "winter";
   const month = new Date().getMonth() + 1;
 
   if (month >= 3 && 5 <= month) {
