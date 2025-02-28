@@ -38,3 +38,11 @@
 .button-summer:hover {
   background-color: #09703b;
 }
+
+.weather-container-summer {
+  background: #5cc1de59;
+}
+
+.forecast-summer {
+  background-color: #5cc1de59;
+}

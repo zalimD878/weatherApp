@@ -1,6 +1,7 @@
 import { windDirectionConverter } from "../utils/windDirectionConverter";
 import barometr from "../assets/svg/barometr.svg";
 import windIcon from "../assets/svg/wind-svgrepo-com.svg";
+import getSeasonClass from "../utils/seasons";
 
 interface CurrentWeatherProps {
   weatherData: {
@@ -15,10 +16,12 @@ interface CurrentWeatherProps {
   };
 }
 
+const season = getSeasonClass();
+
 export function CurrentWeather({ weatherData }: CurrentWeatherProps) {
   return (
     <div className="weather-container-wrapper">
-      <div className="weather-container">
+      <div className={`weather-container weather-container-${season}`}>
         <p className="weather-city">{weatherData.name}</p>
         <div className="weather-main">
           <div className="temperature-discription-block">

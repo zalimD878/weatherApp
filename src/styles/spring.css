@@ -6,7 +6,7 @@
   font-family: "Arial", sans-serif;
   font-size: 38px;
   font-weight: bold;
-  background: linear-gradient(45deg, rgb(235, 145, 145), #ec062d);
+  background-color: #eb4f8f;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
@@ -18,8 +18,12 @@
   margin: 0;
 }
 
+.weather-container-spring {
+  background: #5cc1de59;
+}
+
 .button-spring {
-  background-color: #e02444;
+  background-color: #eb4f8f;
   border: none;
   color: white;
   text-align: center;
@@ -35,5 +39,9 @@
 }
 
 .button-spring:hover {
-  background-color: #e64c8c;
+  background-color: #921c4d;
+}
+
+.forecast-spring {
+  background-color: #5cc1de59;
 }

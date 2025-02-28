@@ -113,7 +113,6 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   font-family: "Arial", sans-serif;
-  background: #f0f0f052;
   color: white;
   padding: 20px;
   border-radius: 15px;
@@ -210,7 +209,6 @@ body {
   width: 70%;
   margin: 0 auto;
   margin-top: 20px;
-  background: #f0f0f05e;
   border-radius: 15px;
   color: white;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);

@@ -2,14 +2,17 @@ import { WeatherForecastList } from "../types/forecast";
 // @ts-ignore
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
+import getSeasonClass from "../utils/seasons";
 
 interface WeatherForecastProps {
   forecastData: WeatherForecastList[];
 }
 
+const season = getSeasonClass();
+
 export function WeatherForecast({ forecastData }: WeatherForecastProps) {
   return (
-    <div className="forecast">
+    <div className={`forecast forecast-${season}`}>
       <Splide
         hasTrack={false}
         options={{
