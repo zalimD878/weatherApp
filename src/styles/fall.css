@@ -37,3 +37,11 @@
 .button-fall:hover {
   background-color: #970909;
 }
+
+.weather-container-fall {
+  background: #f8efef45;
+}
+
+.forecast-fall {
+  background-color: #f8efef45;
+}
