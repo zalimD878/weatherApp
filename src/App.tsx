@@ -1,18 +1,51 @@
-import { getForecastByCity, getWeatherByCity } from "./api/weather";
+import {
+  getForecastByCity,
+  getWeatherByCity,
+  getWeatherByCoordinates,
+} from "./api/weather";
 import "./App.css";
 import { CurrentWeather } from "./components/CurrentWeather";
 import { Input } from "./components/input";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { WeatherDataType } from "./types/weather";
 import { WeatherForecastList } from "./types/forecast";
 import { WeatherForecast } from "./components/weatherForecast";
 import getSeasonClass from "./utils/seasons";
+import { useGeolocation } from "./hooks/useGeolocation";
 
 export default function App() {
   const [weatherData, setWeatherData] = useState<WeatherDataType | null>(null);
   const [forecastData, setForecastData] = useState<
     WeatherForecastList[] | null
   >(null);
+
+  const { userLocation } = useGeolocation();
+
+  useEffect(() => {
+    async function f() {
+      if (userLocation) {
+        const geolocationData = await getWeatherByCoordinates(
+          userLocation?.latitude,
+          userLocation?.longitude
+        );
+
+        setWeatherData({
+          description: geolocationData.weather?.[0]?.description || "",
+          icon: geolocationData.weather?.[0]?.icon || "",
+          feels_like: geolocationData.main.feels_like,
+          pressure: geolocationData.main.pressure,
+          speed: geolocationData.wind.speed,
+          deg: geolocationData.wind.deg,
+          name: geolocationData.name,
+          temp: geolocationData.main.temp,
+        });
+
+        const dataForecast = await getForecastByCity(geolocationData.name);
+        setForecastData(dataForecast.list);
+      }
+    }
+    f();
+  }, [userLocation]);
 
   const handleSearch = async (city: string) => {
     if (!city) return;
