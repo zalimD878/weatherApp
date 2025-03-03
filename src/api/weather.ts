@@ -23,3 +23,17 @@ export async function getForecastByCity(
 
   return data;
 }
+
+export async function getWeatherByCoordinates(
+  latitude: number,
+  longitude: number
+): Promise<WeatherApi> {
+  const { data } = await base.get("/weather", {
+    params: {
+      lat: latitude,
+      lon: longitude,
+    },
+  });
+
+  return data;
+}
