@@ -26,7 +26,9 @@ export function CurrentWeather({ weatherData }: CurrentWeatherProps) {
         <div className="weather-main">
           <div className="temperature-discription-block">
             {/* <div className="temp-icon"> */}
-            <p className="weather-temperature">{weatherData.temp}°</p>
+            <p className="weather-temperature">
+              {Math.round(weatherData.temp)}°
+            </p>
             {/* </div> */}
             <div className="img-des-container">
               <img
